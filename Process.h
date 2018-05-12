@@ -26,6 +26,11 @@ in the source distribution for its full text.
 #endif
 #define PAGE_SIZE_KB ( PAGE_SIZE / ONE_K )
 
+#ifdef _WIN32
+#define pid_t int
+#define uid_t int
+#endif
+
 #include "Object.h"
 
 #include <sys/types.h>

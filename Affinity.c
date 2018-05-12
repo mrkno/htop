@@ -18,6 +18,8 @@ in the source distribution for its full text.
 #endif
 #elif HAVE_LINUX_AFFINITY
 #include <sched.h>
+#elif defined _WIN32
+#include <windows.h>
 #endif
 
 /*{
@@ -111,6 +113,39 @@ bool Affinity_set(Process* proc, Affinity* this) {
    }
    bool ok = (sched_setaffinity(proc->pid, sizeof(unsigned long), &cpuset) == 0);
    return ok;
+}
+
+#elif defined _WIN32
+
+Affinity* Affinity_get(Process* proc, ProcessList* pl) {
+   const HANDLE hProcess = OpenProcess(0x0400 | 0x0010, FALSE, proc->pid);
+   DWORD_PTR processAffinityMask;
+   DWORD_PTR systemAffinityMask;
+
+   if (!GetProcessAffinityMask(hProcess, &processAffinityMask, &systemAffinityMask))
+      return NULL;
+
+   Affinity* affinity = Affinity_new(pl);
+   for (int i = 0; i < pl->cpuCount; i++) {
+      if (processAffinityMask & (1 << i)) {
+         Affinity_add(affinity, i);
+      }
+   }
+   CloseHandle(hProcess);
+   return affinity;
+}
+
+bool Affinity_set(Process* proc, Affinity* this) {
+   const HANDLE hProcess = OpenProcess(0x0400 | 0x0010, FALSE, proc->pid);
+   DWORD_PTR processAffinityMask = 0;
+   for (int i = 0; i < this->used; i++) {
+      if (this->used) {
+         processAffinityMask |= 1 << i;
+      }
+   }
+   bool result = SetProcessAffinityMask(hProcess, processAffinityMask);
+   CloseHandle(hProcess);
+   return result;
 }
 
 #endif

@@ -46,6 +46,9 @@ darwin*)
 solaris*)
    my_htop_platform=solaris
    ;;
+windows*)
+   my_htop_platform=windows
+   ;;
 *)
    my_htop_platform=unsupported
    ;;
@@ -359,6 +362,7 @@ AM_CONDITIONAL([HTOP_OPENBSD], [test "$my_htop_platform" = openbsd])
 AM_CONDITIONAL([HTOP_DARWIN], [test "$my_htop_platform" = darwin])
 AM_CONDITIONAL([HTOP_SOLARIS], [test "$my_htop_platform" = solaris])
 AM_CONDITIONAL([HTOP_UNSUPPORTED], [test "$my_htop_platform" = unsupported])
+AM_CONDITIONAL([HTOP_WINDOWS], [test "$my_htop_platform" = windows])
 AC_SUBST(my_htop_platform)
 AC_CONFIG_FILES([Makefile htop.1])
 AC_OUTPUT

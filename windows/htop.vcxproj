@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E90D2028-8B3A-43E2-AA60-67AF74F9D32F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Action.c" />
+    <ClCompile Include="..\Affinity.c" />
+    <ClCompile Include="..\AffinityPanel.c" />
+    <ClCompile Include="..\AvailableColumnsPanel.c" />
+    <ClCompile Include="..\AvailableMetersPanel.c" />
+    <ClCompile Include="..\BatteryMeter.c" />
+    <ClCompile Include="..\CategoriesPanel.c" />
+    <ClCompile Include="..\CheckItem.c" />
+    <ClCompile Include="..\ClockMeter.c" />
+    <ClCompile Include="..\ColorsPanel.c" />
+    <ClCompile Include="..\ColumnsPanel.c" />
+    <ClCompile Include="..\CPUMeter.c" />
+    <ClCompile Include="..\CRT.c" />
+    <ClCompile Include="..\DisplayOptionsPanel.c" />
+    <ClCompile Include="..\EnvScreen.c" />
+    <ClCompile Include="..\FunctionBar.c" />
+    <ClCompile Include="..\Hashtable.c" />
+    <ClCompile Include="..\Header.c" />
+    <ClCompile Include="..\HostnameMeter.c" />
+    <ClCompile Include="..\htop.c" />
+    <ClCompile Include="..\IncSet.c" />
+    <ClCompile Include="..\InfoScreen.c" />
+    <ClCompile Include="..\ListItem.c" />
+    <ClCompile Include="..\LoadAverageMeter.c" />
+    <ClCompile Include="..\MainPanel.c" />
+    <ClCompile Include="..\MemoryMeter.c" />
+    <ClCompile Include="..\Meter.c" />
+    <ClCompile Include="..\MetersPanel.c" />
+    <ClCompile Include="..\Object.c" />
+    <ClCompile Include="..\OpenFilesScreen.c" />
+    <ClCompile Include="..\Panel.c" />
+    <ClCompile Include="..\Process.c" />
+    <ClCompile Include="..\ProcessList.c" />
+    <ClCompile Include="..\RichString.c" />
+    <ClCompile Include="..\ScreenManager.c" />
+    <ClCompile Include="..\ScreensPanel.c" />
+    <ClCompile Include="..\Settings.c" />
+    <ClCompile Include="..\SignalsPanel.c" />
+    <ClCompile Include="..\StringUtils.c" />
+    <ClCompile Include="..\SwapMeter.c" />
+    <ClCompile Include="..\TasksMeter.c" />
+    <ClCompile Include="..\TraceScreen.c" />
+    <ClCompile Include="..\UptimeMeter.c" />
+    <ClCompile Include="..\UsersTable.c" />
+    <ClCompile Include="..\Vector.c" />
+    <ClCompile Include="..\XAlloc.c" />
+    <ClCompile Include="Battery.c" />
+    <ClCompile Include="err.c" />
+    <ClCompile Include="Platform.c" />
+    <ClCompile Include="pwd.c" />
+    <ClCompile Include="sys\signal.c" />
+    <ClCompile Include="sys\time.c" />
+    <ClCompile Include="sys\wait.c" />
+    <ClCompile Include="WindowsCRT.c" />
+    <ClCompile Include="WindowsProcess.c" />
+    <ClCompile Include="WindowsProcessList.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Action.h" />
+    <ClInclude Include="..\Affinity.h" />
+    <ClInclude Include="..\AffinityPanel.h" />
+    <ClInclude Include="..\AvailableColumnsPanel.h" />
+    <ClInclude Include="..\AvailableMetersPanel.h" />
+    <ClInclude Include="..\BatteryMeter.h" />
+    <ClInclude Include="..\CategoriesPanel.h" />
+    <ClInclude Include="..\CheckItem.h" />
+    <ClInclude Include="..\ClockMeter.h" />
+    <ClInclude Include="..\ColorsPanel.h" />
+    <ClInclude Include="..\ColumnsPanel.h" />
+    <ClInclude Include="..\config.h" />
+    <ClInclude Include="..\CPUMeter.h" />
+    <ClInclude Include="..\CRT.h" />
+    <ClInclude Include="..\DisplayOptionsPanel.h" />
+    <ClInclude Include="..\EnvScreen.h" />
+    <ClInclude Include="..\FunctionBar.h" />
+    <ClInclude Include="..\Hashtable.h" />
+    <ClInclude Include="..\Header.h" />
+    <ClInclude Include="..\HostnameMeter.h" />
+    <ClInclude Include="..\htop.h" />
+    <ClInclude Include="..\IncSet.h" />
+    <ClInclude Include="..\InfoScreen.h" />
+    <ClInclude Include="..\ListItem.h" />
+    <ClInclude Include="..\LoadAverageMeter.h" />
+    <ClInclude Include="..\MainPanel.h" />
+    <ClInclude Include="..\MemoryMeter.h" />
+    <ClInclude Include="..\Meter.h" />
+    <ClInclude Include="..\MetersPanel.h" />
+    <ClInclude Include="..\Object.h" />
+    <ClInclude Include="..\OpenFilesScreen.h" />
+    <ClInclude Include="..\Panel.h" />
+    <ClInclude Include="..\Process.h" />
+    <ClInclude Include="..\ProcessList.h" />
+    <ClInclude Include="..\RichString.h" />
+    <ClInclude Include="..\ScreenManager.h" />
+    <ClInclude Include="..\ScreensPanel.h" />
+    <ClInclude Include="..\Settings.h" />
+    <ClInclude Include="..\SignalsPanel.h" />
+    <ClInclude Include="..\StringUtils.h" />
+    <ClInclude Include="..\SwapMeter.h" />
+    <ClInclude Include="..\TasksMeter.h" />
+    <ClInclude Include="..\TraceScreen.h" />
+    <ClInclude Include="..\UptimeMeter.h" />
+    <ClInclude Include="..\UsersTable.h" />
+    <ClInclude Include="..\Vector.h" />
+    <ClInclude Include="..\XAlloc.h" />
+    <ClInclude Include="Battery.h" />
+    <ClInclude Include="err.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="pwd.h" />
+    <ClInclude Include="signal.h" />
+    <ClInclude Include="strings.h" />
+    <ClInclude Include="sys\param.h" />
+    <ClInclude Include="sys\time.h" />
+    <ClInclude Include="sys\wait.h" />
+    <ClInclude Include="unistd.h" />
+    <ClInclude Include="WindowsCRT.h" />
+    <ClInclude Include="WindowsProcess.h" />
+    <ClInclude Include="WindowsProcessList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\pdcurses_vc120.3.4.0.3\build\native\pdcurses_vc120.targets" Condition="Exists('packages\pdcurses_vc120.3.4.0.3\build\native\pdcurses_vc120.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\pdcurses_vc120.3.4.0.3\build\native\pdcurses_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\pdcurses_vc120.3.4.0.3\build\native\pdcurses_vc120.targets'))" />
+  </Target>
+</Project>

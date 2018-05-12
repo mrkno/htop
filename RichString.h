@@ -15,6 +15,9 @@ in the source distribution for its full text.
 #include <ctype.h>
 
 #include <assert.h>
+#ifdef _WIN32
+#undef bool
+#endif
 #ifdef HAVE_NCURSESW_CURSES_H
 #include <ncursesw/curses.h>
 #elif HAVE_NCURSES_NCURSES_H
@@ -25,6 +28,9 @@ in the source distribution for its full text.
 #include <ncurses.h>
 #elif HAVE_CURSES_H
 #include <curses.h>
+#endif
+#ifdef _WIN32
+#define bool _Bool
 #endif
 
 #ifdef HAVE_LIBNCURSESW

@@ -120,6 +120,10 @@ typedef enum ColorElements_ {
    LAST_COLORELEMENT
 } ColorElements;
 
+#ifdef _WIN32
+#define __attribute__(x)
+#endif
+
 void CRT_fatalError(const char* note) __attribute__ ((noreturn));
 
 void CRT_handleSIGSEGV(int sgn);

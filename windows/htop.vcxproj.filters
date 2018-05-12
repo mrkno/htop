@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Action.c" />
+    <ClCompile Include="..\Affinity.c" />
+    <ClCompile Include="..\AffinityPanel.c" />
+    <ClCompile Include="..\AvailableColumnsPanel.c" />
+    <ClCompile Include="..\AvailableMetersPanel.c" />
+    <ClCompile Include="..\InfoScreen.c" />
+    <ClCompile Include="..\BatteryMeter.c" />
+    <ClCompile Include="..\CategoriesPanel.c" />
+    <ClCompile Include="..\CheckItem.c" />
+    <ClCompile Include="..\ClockMeter.c" />
+    <ClCompile Include="..\ColorsPanel.c" />
+    <ClCompile Include="..\ColumnsPanel.c" />
+    <ClCompile Include="..\CPUMeter.c" />
+    <ClCompile Include="..\CRT.c" />
+    <ClCompile Include="..\DisplayOptionsPanel.c" />
+    <ClCompile Include="..\EnvScreen.c" />
+    <ClCompile Include="..\FunctionBar.c" />
+    <ClCompile Include="..\Hashtable.c" />
+    <ClCompile Include="..\Header.c" />
+    <ClCompile Include="..\HostnameMeter.c" />
+    <ClCompile Include="..\htop.c" />
+    <ClCompile Include="..\IncSet.c" />
+    <ClCompile Include="..\Panel.c" />
+    <ClCompile Include="..\OpenFilesScreen.c" />
+    <ClCompile Include="..\Object.c" />
+    <ClCompile Include="..\MetersPanel.c" />
+    <ClCompile Include="..\Meter.c" />
+    <ClCompile Include="..\MemoryMeter.c" />
+    <ClCompile Include="..\MainPanel.c" />
+    <ClCompile Include="..\LoadAverageMeter.c" />
+    <ClCompile Include="..\ListItem.c" />
+    <ClCompile Include="..\Process.c" />
+    <ClCompile Include="..\ProcessList.c" />
+    <ClCompile Include="..\RichString.c" />
+    <ClCompile Include="..\ScreenManager.c" />
+    <ClCompile Include="..\ScreensPanel.c" />
+    <ClCompile Include="..\Settings.c" />
+    <ClCompile Include="..\SignalsPanel.c" />
+    <ClCompile Include="..\StringUtils.c" />
+    <ClCompile Include="..\SwapMeter.c" />
+    <ClCompile Include="..\TasksMeter.c" />
+    <ClCompile Include="..\TraceScreen.c" />
+    <ClCompile Include="..\UptimeMeter.c" />
+    <ClCompile Include="..\UsersTable.c" />
+    <ClCompile Include="..\Vector.c" />
+    <ClCompile Include="..\XAlloc.c" />
+    <ClCompile Include="WindowsCRT.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsProcess.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsProcessList.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Battery.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="sys\time.c">
+      <Filter>windows\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="pwd.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="sys\wait.c">
+      <Filter>windows\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="sys\signal.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="err.c">
+      <Filter>windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AvailableMetersPanel.h" />
+    <ClInclude Include="..\Action.h" />
+    <ClInclude Include="..\Affinity.h" />
+    <ClInclude Include="..\AffinityPanel.h" />
+    <ClInclude Include="..\AvailableColumnsPanel.h" />
+    <ClInclude Include="..\InfoScreen.h" />
+    <ClInclude Include="..\BatteryMeter.h" />
+    <ClInclude Include="..\CategoriesPanel.h" />
+    <ClInclude Include="..\CheckItem.h" />
+    <ClInclude Include="..\ClockMeter.h" />
+    <ClInclude Include="..\ColorsPanel.h" />
+    <ClInclude Include="..\ColumnsPanel.h" />
+    <ClInclude Include="..\CPUMeter.h" />
+    <ClInclude Include="..\CRT.h" />
+    <ClInclude Include="..\DisplayOptionsPanel.h" />
+    <ClInclude Include="..\EnvScreen.h" />
+    <ClInclude Include="..\FunctionBar.h" />
+    <ClInclude Include="..\Hashtable.h" />
+    <ClInclude Include="..\Header.h" />
+    <ClInclude Include="..\HostnameMeter.h" />
+    <ClInclude Include="..\htop.h" />
+    <ClInclude Include="..\IncSet.h" />
+    <ClInclude Include="..\Panel.h" />
+    <ClInclude Include="..\ListItem.h" />
+    <ClInclude Include="..\LoadAverageMeter.h" />
+    <ClInclude Include="..\MainPanel.h" />
+    <ClInclude Include="..\MemoryMeter.h" />
+    <ClInclude Include="..\Meter.h" />
+    <ClInclude Include="..\MetersPanel.h" />
+    <ClInclude Include="..\Object.h" />
+    <ClInclude Include="..\OpenFilesScreen.h" />
+    <ClInclude Include="..\Process.h" />
+    <ClInclude Include="..\ProcessList.h" />
+    <ClInclude Include="..\RichString.h" />
+    <ClInclude Include="..\ScreenManager.h" />
+    <ClInclude Include="..\ScreensPanel.h" />
+    <ClInclude Include="..\Settings.h" />
+    <ClInclude Include="..\SignalsPanel.h" />
+    <ClInclude Include="..\StringUtils.h" />
+    <ClInclude Include="..\SwapMeter.h" />
+    <ClInclude Include="..\TasksMeter.h" />
+    <ClInclude Include="..\TraceScreen.h" />
+    <ClInclude Include="..\UptimeMeter.h" />
+    <ClInclude Include="..\UsersTable.h" />
+    <ClInclude Include="..\Vector.h" />
+    <ClInclude Include="..\XAlloc.h" />
+    <ClInclude Include="WindowsProcessList.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsCRT.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsProcess.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Battery.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\config.h" />
+    <ClInclude Include="err.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="sys\time.h">
+      <Filter>windows\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="strings.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="pwd.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="sys\wait.h">
+      <Filter>windows\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="signal.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="sys\param.h">
+      <Filter>windows\sys</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="windows">
+      <UniqueIdentifier>{75726494-d1e3-430c-9dbf-69fcf81603e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows\sys">
+      <UniqueIdentifier>{6f840cb2-d0bf-4f43-9048-0535344c3f96}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
