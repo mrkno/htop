@@ -104,6 +104,13 @@ void InfoScreen_appendLine(InfoScreen* this, const char* line) {
       Panel_add(this->display, (Object*)last);
 }
 
+#ifdef _WIN32
+// no mouse support in windows console
+int getmouse(MEVENT* mevent) {
+   return ERR;
+}
+#endif
+
 void InfoScreen_run(InfoScreen* this) {
    Panel* panel = this->display;
 

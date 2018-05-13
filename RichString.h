@@ -16,6 +16,7 @@ in the source distribution for its full text.
 
 #include <assert.h>
 #ifdef _WIN32
+#include <windows.h>
 #undef bool
 #endif
 #ifdef HAVE_NCURSESW_CURSES_H

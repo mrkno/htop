@@ -44,7 +44,9 @@ struct Object_ {
 
 extern ObjectClass Object_class;
 
-#ifdef DEBUG
+#if defined DEBUG || defined _WIN32
+
+#include <stdbool.h>
 
 bool Object_isA(Object* o, const ObjectClass* klass);
 

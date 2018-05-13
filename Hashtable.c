@@ -32,7 +32,7 @@ struct Hashtable_ {
 };
 }*/
 
-#ifdef DEBUG
+#if defined DEBUG || defined _WIN32
 
 static bool Hashtable_isConsistent(Hashtable* this) {
    int items = 0;

@@ -19,6 +19,15 @@ int ClockMeter_attributes[] = {
    CLOCK
 };
 
+#ifdef _WIN32
+struct tm *localtime_r(time_t *_clock, struct tm *_result) {
+   struct tm *p = localtime(_clock);
+   if (p)
+      *(_result) = *p;
+   return p;
+}
+#endif
+
 static void ClockMeter_updateValues(Meter* this, char* buffer, int size) {
    time_t t = time(NULL);
    struct tm result;

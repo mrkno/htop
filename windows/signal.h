@@ -4,6 +4,7 @@
 #define _SIGNAL_H
 
 #define SIGTERM         15
+#define SIGQUIT         14
 
 void kill(int pid, int signal);
 

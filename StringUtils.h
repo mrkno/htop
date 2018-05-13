@@ -11,6 +11,15 @@ in the source distribution for its full text.
 
 #include <stdio.h>
 
+#ifdef _WIN32
+#include <ctype.h>
+#include <string.h>
+
+int strncasecmp(const char *s1, const char *s2, register size_t n);
+char* strcasestr(const char *s, const char *find);
+
+#endif
+
 #define String_startsWith(s, match) (strncmp((s),(match),strlen(match)) == 0)
 #define String_contains_i(s1, s2) (strcasestr(s1, s2) != NULL)
 

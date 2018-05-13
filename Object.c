@@ -46,7 +46,7 @@ ObjectClass Object_class = {
    .extends = NULL
 };
 
-#ifdef DEBUG
+#if defined DEBUG || defined _WIN32
 
 bool Object_isA(Object* o, const ObjectClass* klass) {
    if (!o)

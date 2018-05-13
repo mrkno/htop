@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include <lm.h>
-#include <Secext.h>
+
 /*
 * The way to implement these function is discribed here ...
 *  http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnucmg/html/UCMGch09.asp

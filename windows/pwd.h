@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _PWD_H_
 #define	_PWD_H_
 
@@ -6,7 +8,7 @@
 /*
 * Definitions of uid_t and getuid is the one found in the cygwin <sys/types.h>
 */
-typedef	unsigned short	uid_t;
+typedef unsigned short uid_t;
 //uid_t   getuid(void);
 
 /*

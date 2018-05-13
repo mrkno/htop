@@ -57,7 +57,7 @@ void Vector_delete(Vector* this) {
    free(this);
 }
 
-#ifdef DEBUG
+#if defined DEBUG || defined _WIN32
 
 static inline bool Vector_isConsistent(Vector* this) {
    assert(this->items <= this->arraySize);
